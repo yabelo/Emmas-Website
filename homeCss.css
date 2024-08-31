@@ -1,0 +1,120 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Secular One";
+    direction: rtl;
+}
+/* Define CSS variables for background colors */
+:root {
+    --section-background-about-me: #ffffff; /* Example color for the about-me section */
+    --section-background-my-blog: #f9f9f9; /* Example color for the my-blog section */
+    --section-background-therapeutic-areas: #ffffff; /* Example color for the therapeutic-areas section */
+    --section-background-ways-of-treatment: #f9f9f9; /* Example color for the ways-of-treatment section */
+    --section-background-recommendations: #ffffff; /* Example color for the recommendations section */
+    --section-background-contact-us: #f9f9f9; /* Example color for the contact-us section */
+}
+
+/* Base styles for sections */
+section {
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+/* Specific section styles */
+.about-me {
+    background-color: var(--section-background-about-me);
+}
+
+.my-blog {
+    background-color: var(--section-background-my-blog);
+}
+
+.therapeutic-areas {
+    background-color: var(--section-background-therapeutic-areas);
+}
+
+.ways-of-treatment {
+    background-color: var(--section-background-ways-of-treatment);
+}
+
+.recommendations {
+    background-color: var(--section-background-recommendations);
+}
+
+.contact-us {
+    background-color: var(--section-background-contact-us);
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px; /* Reduce padding in header */
+    }
+
+    .logo img {
+        max-height: 80px; /* Reduce logo size */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce margin between navigation items */
+    }
+
+    .about-me,
+    .recommendations,
+    .contact-us {
+        padding: 20px; /* Reduce padding for main sections */
+    }
+
+    .about-me .text,
+    .about-me .image,
+    .recommendations .text,
+    .contact-us .text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-me .image {
+        width: 100%;
+    }
+
+    .recommendation {
+        width: 100%;
+        max-width: none;
+    }
+
+    .recommendation-list {
+        flex-direction: column;
+    }
+
+    .recommendation:last-child {
+        border-right: 2px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .contact-info,
+    .form {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px)
+{
+    object[type="image/svg+xml"]
+    {
+        height: 400px;
+    }
+}
+
+
+.secular-one-regular
+{
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

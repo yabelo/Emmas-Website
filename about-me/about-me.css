@@ -1,0 +1,91 @@
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    direction: rtl;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.about-me #logo {
+    position: absolute;
+    top: 0;
+    right: 20px; /* Add unit 'px' */
+    width: 15%;
+}
+
+.about-me .text {
+    width: 50%;
+}
+
+.about-me .image {
+    width: 40%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 1s ease;
+}
+
+.about-me .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.about-me .image.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about-me h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .about-me {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .about-me #logo {
+        position: static;
+        width: 30%; /* Adjust width as needed */
+        margin: 0 auto 20px auto; /* Center the logo horizontally and add margin at the bottom */
+        text-align: center; /* Center logo content horizontally */
+    }
+
+    .about-me .text {
+        width: 100%;
+        text-align: center; /* Center text for better readability */
+    }
+
+    .about-me .image {
+        width: 100%;
+        margin-top: 20px; /* Add space above image */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-me #logo {
+        width: 40%; /* Adjust size for very small screens */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .about-me h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .about-me p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}

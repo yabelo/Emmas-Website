@@ -1,0 +1,121 @@
+/* Base styles */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Space between menu and toggle icon */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    box-sizing: border-box;
+    height: 60px; /* Fixed height for header */
+}
+
+/* Menu styles */
+nav {
+    flex: 1; /* Allow nav to take up remaining space */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    align-items: center;
+    direction: rtl;
+}
+
+nav ul li {
+    margin: 0 20px; /* Adjust margin for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Menu Toggle Icon */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: relative; /* Adjust positioning */
+}
+
+.menu-toggle img {
+    max-height: 40px; /* Adjust height to fit within the header */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+        position: absolute;
+        right: 10px; /* Adjust position of the toggle icon */
+        top: 10px; /* Position toggle icon at the top */
+    }
+
+    nav {
+        display: none; /* Hide the menu by default */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center; /* Center menu items */
+        width: 100%;
+        padding: 10px 0;
+        background-color: #333; /* Ensure the menu is visible when opened */
+        position: absolute;
+        top: 60px; /* Position menu below the header */
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+        height: 60px;
+    }
+
+    .menu-toggle {
+        right: 15px; /* Adjust position if needed */
+        top: 10px; /* Position toggle icon at the top */
+    }
+
+    nav ul {
+        width: 100%;
+        align-items: center; /* Center menu items */
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Add this to your CSS */
+.no-scroll {
+    overflow: hidden;
+}

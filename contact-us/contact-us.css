@@ -1,0 +1,115 @@
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+    min-height: calc(100vh - 80px); /* Use min-height instead of height for better flexibility */
+    direction: rtl;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    background-image: url('/assets/contact-us-image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-info {
+    width: 100%;
+    padding-right: 20px;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: right; /* Moved this to contact-info for consistency */
+}
+
+.contact-info .text {
+    text-align: right;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px; /* Limit the width on larger screens */
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us .text {
+    text-align: center;
+}
+
+.contact-us .form {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px; /* Limit the width */
+}
+
+.contact-us .form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-us .form label {
+    font-weight: bold;
+}
+
+.contact-us .form input,
+.contact-us .form button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%; /* Make inputs and buttons fill the width */
+}
+
+.contact-us .form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make the button full-width */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us .form button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        padding-right: 10px;
+    }
+
+    .contact-us {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .form {
+        max-width: 100%; /* Remove max-width on very small screens */
+    }
+    
+    .contact-us .form {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .contact-us .form input,
+    .contact-us .form button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-us .form button {
+        width: 100%; /* Ensure button stays full-width */
+    }
+}
